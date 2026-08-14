@@ -104,7 +104,7 @@ const docsDir = join(checkout, 'docs')
 const sha = git(checkout, 'rev-parse', 'HEAD')
 const commitDate = git(checkout, 'log', '-1', '--format=%cI')
 let upstreamUrl = OFFICIAL_UPSTREAM
-try { upstreamUrl = git(checkout, 'remote', 'get-url', 'origin') } catch { /* no remote: keep official */ }
+try { upstreamUrl = git(checkout, 'remote', 'get-url', 'origin').replace(/\.git$/, '') } catch { /* no remote: keep official */ }
 
 const files = inventoryDocs(docsDir)
 const current = {}

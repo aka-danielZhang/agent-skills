@@ -10,6 +10,7 @@ permissions:
 
 env:
   UPSTREAM_REPO: https://github.com/deepseek-ai/deepseek-harness
+  DSH_CHECKOUT: ${{ github.workspace }}/deepseek-harness
 
 jobs:
   update:
@@ -20,11 +21,9 @@ jobs:
         with:
           node-version: 22
       - name: Clone upstream harness docs
-        run: git clone --depth 1 "$UPSTREAM_REPO" "$HOME/deepseek-harness"
+        run: git clone --depth 1 "$UPSTREAM_REPO" "$DSH_CHECKOUT"
       - name: Run update check (no commit; this workflow commits)
         run: node scripts/update-check.mjs --no-commit
-        env:
-          DSH_CHECKOUT: ${{ env.HOME }}/deepseek-harness
       - name: Commit and push if changed
         run: |
           git config user.name "update-check bot"
