@@ -1,0 +1,16 @@
+.github/workflows/update-check.yml
+  h_04d4cd0008e41d 13,24
+scripts/update-check.mjs
+  h_04d4cd0008e41d 107
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.22",
+  "base_commit_sha": "dc7bc25fe0a479aeeb89b603e3b8b4683e87ddb8",
+  "prompts": {},
+  "humans": {
+    "h_04d4cd0008e41d": {
+      "author": "aka-danielZhang <424011753@qq.com>"
+    }
+  }
+}
