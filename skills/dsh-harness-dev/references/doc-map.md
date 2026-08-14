@@ -48,7 +48,7 @@
 | 文档标准（分层、one home per fact、词数预算、i18n pairing） | `AGENTS.md`（docs 子树） |
 
 <!-- BEGIN GENERATED:doc-index (scripts/update-check.mjs) — do not edit -->
-上游：https://github.com/deepseek-ai/deepseek-harness.git @ 47f943859b（2026-08-13）；由 scripts/update-check.mjs 生成，勿手改本区。
+上游：https://github.com/deepseek-ai/deepseek-harness @ 47f943859b（2026-08-13）；由 scripts/update-check.mjs 生成，勿手改本区。
 
 ### 顶层
 - `AGENTS.md` — AGENTS.md — The documentation standard
