@@ -1,0 +1,28 @@
+.github/workflows/update-check.yml
+  h_04d4cd0008e41d 1-38
+.gitignore
+  h_04d4cd0008e41d 1-4
+CHANGELOG.md
+  h_04d4cd0008e41d 1-21
+LICENSE
+  h_04d4cd0008e41d 1-21
+README.md
+  h_04d4cd0008e41d 3,10,13-20,37-59,63-64,72-75
+install.sh
+  h_04d4cd0008e41d 2-4,9,16-17,19-21
+scripts/install-cron.sh
+  h_04d4cd0008e41d 1-63
+scripts/update-check.mjs
+  h_04d4cd0008e41d 1-173
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.22",
+  "base_commit_sha": "610e6f5318eb7ee3b6d7cafd670add24ccf13548",
+  "prompts": {},
+  "humans": {
+    "h_04d4cd0008e41d": {
+      "author": "aka-danielZhang <424011753@qq.com>"
+    }
+  }
+}
