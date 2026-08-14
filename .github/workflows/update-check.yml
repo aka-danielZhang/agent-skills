@@ -1,0 +1,38 @@
+name: update-check
+
+on:
+  schedule:
+    - cron: '0 2 * * *' # daily 02:00 UTC
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+env:
+  UPSTREAM_REPO: https://github.com/deepseek-ai/deepseek-harness
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Clone upstream harness docs
+        run: git clone --depth 1 "$UPSTREAM_REPO" "$HOME/deepseek-harness"
+      - name: Run update check (no commit; this workflow commits)
+        run: node scripts/update-check.mjs --no-commit
+        env:
+          DSH_CHECKOUT: ${{ env.HOME }}/deepseek-harness
+      - name: Commit and push if changed
+        run: |
+          git config user.name "update-check bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add skills
+          if git diff --cached --quiet; then
+            echo "up to date"
+          else
+            git commit -m "sync(dsh-harness-dev): refresh doc index from upstream"
+            git push
+          fi
