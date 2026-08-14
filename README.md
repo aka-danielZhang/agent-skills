@@ -5,7 +5,7 @@
 ## 安装
 
 ```sh
-git clone <remote-url> ~/workspace/agent-skills
+git clone https://github.com/aka-danielZhang/agent-skills.git ~/workspace/agent-skills
 cd ~/workspace/agent-skills
 ./install.sh            # 拷贝 skills/* 到 ~/.agents/skills/（重装用 --force）
 ```
