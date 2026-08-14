@@ -1,6 +1,6 @@
 # Out-of-tree 插件与组合机制
 
-在 harness 仓库之外开发插件、并把它们挂进 dsh 运行时的方式。教程源：`$DSH/docs/user/develop/`（basic/framework/practice）；组合机制源：`$DSH/docs/architecture.md` 的 Profiles and bundles。`$DSH` = `/Users/danielwei_zhang/workspace/coding-study/deepseek-harness`。
+在 harness 仓库之外开发插件、并把它们挂进 dsh 运行时的方式。教程源：`$DSH/docs/user/develop/`（basic/framework/practice）；组合机制源：`$DSH/docs/architecture.md` 的 Profiles and bundles。定位 `$DSH`（Harness checkout）的方法见 SKILL.md。
 
 ## 插件本质与形式
 

@@ -1,6 +1,6 @@
 # 仓库约定蒸馏（源：$DSH/AGENTS.md）
 
-`$DSH` = `/Users/danielwei_zhang/workspace/coding-study/deepseek-harness`。以下是高频踩坑项的浓缩；完整与最新以 `$DSH/AGENTS.md` 为准。
+定位 `$DSH`（Harness checkout）的方法见 SKILL.md。以下是高频踩坑项的浓缩；完整与最新以 `$DSH/AGENTS.md` 为准。
 
 ## 包与模块
 

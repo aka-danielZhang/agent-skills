@@ -1,12 +1,20 @@
 ---
 name: dsh-harness-dev
+version: 1.1.0
 description: Develop plugins for the DeepSeek Harness (DSH), the Cordis-based agent harness — in-repo packages (tools, services, events, UI), out-of-tree plugins mounted via cordis.yml/profile patches, and where each capability belongs. Use when the user mentions deepseek-harness, DSH, harness 插件, cordis.yml, ctx.tools/ctx.on/ctx.effect, @deepseek-ai/dsh-* packages, agent preset, adding a tool/service/package to the harness, or asks how the harness works while working outside its checkout.
 whenToUse: 任何为 DeepSeek Harness 开发、调试、扩展插件或组合 agent preset 的工作；cwd 不在 harness 仓库内时尤其依赖本 skill 路由文档。
 ---
 
 # 开发 DeepSeek Harness (DSH) 插件
 
-本机权威源码与文档：`/Users/danielwei_zhang/workspace/coding-study/deepseek-harness`（下称 `$DSH`）。所有文档路径相对 `$DSH/docs/`。docs 是权威来源，本 skill 是导航与蒸馏；冲突时以 docs 和源码为准。
+## 定位 Harness checkout
+
+本 skill 依赖一个 DeepSeek Harness 源码 checkout 作为权威文档来源，按以下顺序定位（下称 `$DSH`）：
+
+1. 环境变量 `DSH_CHECKOUT`；
+2. `~/workspace/coding-study/deepseek-harness`。
+
+验证标准：`$DSH/docs/architecture.md` 存在。两处都没有时，向用户询问 checkout 位置，或建议 `git clone https://github.com/deepseek-ai/deepseek-harness`。本文档路径均相对 `$DSH/docs/`，中文版同名 `.zh.md`。docs 是权威来源，本 skill 是导航与蒸馏；冲突时以 docs 和源码为准。
 
 ## 第一步：判断开发形态
 
@@ -93,8 +101,9 @@ cd $DSH && pnpm dsh web --patch /absolute/path/to/my-plugin/cordis.yml
 
 ## 按需读取（相对本 skill 目录）
 
-- `references/doc-map.md` — 任务→文档地图：每个开发任务该读 docs 里哪篇。
+- `references/doc-map.md` — 任务→文档地图 + 自动生成的文档全量索引（生成区勿手改）。
 - `references/conventions.md` — 仓库约定蒸馏：命名、ESM、effects、typed events、测试策略、PR 规则。
 - `references/out-of-tree.md` — out-of-tree 插件与组合机制：profile/bundle/patch 层叠、preset、配置校验。
+- `upstream-state.json` — 上游同步状态：记录本 skill 蒸馏自哪个 harness 提交、各文档内容指纹。
 
-Cordis 基础不熟时：概念速览 `cordis-primer.md`；动手教程 `cordis-tutorial/index.md`（7 章，keyless）；ctx API 参考 `cordis-api/context.md` 与各子系统页的 Cordis API 区。
+本 skill 由仓库根的 `scripts/update-check.mjs` 定期对照 `$DSH` docs 重生成索引并检测漂移。Cordis 基础不熟时：概念速览 `cordis-primer.md`；动手教程 `cordis-tutorial/index.md`（7 章，keyless）；ctx API 参考 `cordis-api/context.md` 与各子系统页的 Cordis API 区。
