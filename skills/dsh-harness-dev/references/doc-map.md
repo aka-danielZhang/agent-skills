@@ -124,7 +124,6 @@
 - `subsystems/jobs.md` — Background Task Runtime
 - `subsystems/llm-streaming.md` — LLM Streaming
 - `subsystems/lsp.md` — LSP navigation
-- `subsystems/mcp.md` — MCP Composition
 - `subsystems/permission-presets.md` — Permission Presets
 - `subsystems/persistence.md` — Session Persistence
 - `subsystems/plan.md` — Plan Mode

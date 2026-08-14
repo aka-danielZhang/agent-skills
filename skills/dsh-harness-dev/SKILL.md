@@ -1,6 +1,6 @@
 ---
 name: dsh-harness-dev
-version: 1.1.1
+version: 1.1.2
 description: Develop plugins for the DeepSeek Harness (DSH), the Cordis-based agent harness — in-repo packages (tools, services, events, UI), out-of-tree plugins mounted via cordis.yml/profile patches, and where each capability belongs. Use when the user mentions deepseek-harness, DSH, harness 插件, cordis.yml, ctx.tools/ctx.on/ctx.effect, @deepseek-ai/dsh-* packages, agent preset, adding a tool/service/package to the harness, or asks how the harness works while working outside its checkout.
 whenToUse: 任何为 DeepSeek Harness 开发、调试、扩展插件或组合 agent preset 的工作；cwd 不在 harness 仓库内时尤其依赖本 skill 路由文档。
 ---
