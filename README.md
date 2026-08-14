@@ -49,11 +49,14 @@ node scripts/update-check.mjs        # 手动：同步一次（见下）
 `update-check.mjs` 每次运行：
 
 1. 定位 checkout（`DSH_CHECKOUT` → 缺省路径）。
-2. 清点 `docs/` 全部非中文 Markdown，逐文件 sha256 指纹。
-3. 与 `skills/dsh-harness-dev/upstream-state.json` 对比：新增 / 修改 / 删除。
-4. 重生成 `references/doc-map.md` 的 `GENERATED:doc-index` 区（全量索引，含上游提交号）。
-5. 校验手工维护表引用的文档路径仍存在；缺失则告警并以退出码 2 结束（需人工修订）。
-6. 有实际变化时 bump SKILL.md 的 `version` patch 段并自动提交（`--no-commit` 跳过提交，CI 用）。
+2. **脏树保护**：checkout 的 `docs/` 有未提交 `.md` 变更时跳过同步并退出码 3——脏工作树会把 WIP 当上游记录，与 CI 的干净 clone 同步来回打架；`--allow-dirty` 可显式同步 WIP 文档。
+3. 清点 `docs/` 全部非中文 Markdown，逐文件 sha256 指纹。
+4. 与 `skills/dsh-harness-dev/upstream-state.json` 对比：新增 / 修改 / 删除。
+5. 重生成 `references/doc-map.md` 的 `GENERATED:doc-index` 区（全量索引，含上游提交号）。
+6. 校验手工维护表引用的文档路径仍存在；缺失则告警并以退出码 2 结束（需人工修订）。
+7. 有实际变化时 bump SKILL.md 的 `version` patch 段并自动提交（`--no-commit` 跳过提交，CI 用）。
+
+退出码：`0` 干净 / `2` 引用缺失需人工修表 / `3` 脏树跳过 / `1` 错误。
 
 注意：脚本只保证**索引与引用**不腐化；`references/conventions.md` 等蒸馏内容需要人工复核——指纹检测到对应上游文档变化时，review 自动提交的 diff 即可。
 

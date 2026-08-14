@@ -11,7 +11,9 @@
  *  6. On real change: bump the SKILL.md `version` patch segment and commit (unless `--no-commit`).
  *
  * Exit codes: 0 = up to date or synced cleanly; 2 = synced but cited docs are missing
- * (fix the hand-maintained tables); 1 = error (e.g. checkout not found).
+ * (fix the hand-maintained tables); 3 = checkout has uncommitted docs changes (sync skipped —
+ * a dirty working tree would record WIP, not upstream, and fight the CI clean-clone sync;
+ * pass --allow-dirty to sync WIP docs deliberately); 1 = error (e.g. checkout not found).
  */
 import { execFileSync } from 'node:child_process'
 import { createHash } from 'node:crypto'
@@ -30,6 +32,7 @@ const OFFICIAL_UPSTREAM = 'https://github.com/deepseek-ai/deepseek-harness'
 const BEGIN = '<!-- BEGIN GENERATED:doc-index (scripts/update-check.mjs) — do not edit -->'
 const END = '<!-- END GENERATED:doc-index -->'
 const noCommit = process.argv.includes('--no-commit')
+const allowDirty = process.argv.includes('--allow-dirty')
 
 const fail = (msg) => { console.error(`error: ${msg}`); process.exit(1) }
 const git = (cwd, ...args) => execFileSync('git', ['-C', cwd, ...args], { encoding: 'utf8' }).trim()
@@ -101,6 +104,20 @@ if (!checkout) {
   fail(`harness checkout not found — set DSH_CHECKOUT or clone ${OFFICIAL_UPSTREAM} to ${DEFAULT_CHECKOUT}`)
 }
 const docsDir = join(checkout, 'docs')
+
+// A dirty docs tree would fingerprint WIP instead of upstream; the daily CI clean-clone sync
+// would then flip the state back, producing commit ping-pong. Skip unless explicitly allowed.
+if (!allowDirty) {
+  const dirty = git(checkout, 'status', '--porcelain', '--', 'docs').split('\n')
+    .filter((l) => l.trim() !== '' && l.trimEnd().endsWith('.md'))
+  if (dirty.length > 0) {
+    console.warn(`warning: ${dirty.length} uncommitted .md change(s) under docs/ of the checkout — skipping sync.`)
+    for (const l of dirty) console.warn(`  ${l}`)
+    console.warn('commit or stash them in the harness checkout, or pass --allow-dirty to sync WIP deliberately.')
+    process.exit(3)
+  }
+}
+
 const sha = git(checkout, 'rev-parse', 'HEAD')
 const commitDate = git(checkout, 'log', '-1', '--format=%cI')
 let upstreamUrl = OFFICIAL_UPSTREAM

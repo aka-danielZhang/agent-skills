@@ -2,6 +2,13 @@
 
 本仓库遵循 [Keep a Changelog](https://keepachangelog.com/zh-CN/1.1.0/)；版本号语义：skill 内容结构调整 bump minor，上游文档同步 bump patch（由 `scripts/update-check.mjs` 自动完成）。
 
+## [1.1.2] - 2026-08-15
+
+### 修复
+- CI workflow：job 级 `env.HOME` 在 `env:` 上下文中不可用导致路径为空，改用 `${{ github.workspace }}` 固定路径。
+- 上游 URL 归一化（去 `.git` 后缀），避免本地与 CI 远程地址写法差异造成无意义 diff。
+- 脏树保护：harness checkout 的 `docs/` 有未提交 `.md` 变更时跳过同步（退出码 3），防止 WIP 指纹与 CI 干净 clone 同步来回打架；`--allow-dirty` 显式放行。
+
 ## [1.1.0] - 2026-08-15
 
 ### 改变
