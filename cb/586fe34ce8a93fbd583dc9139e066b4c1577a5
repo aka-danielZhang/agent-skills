@@ -1,0 +1,24 @@
+README.md
+  h_04d4cd0008e41d 1-41
+install.sh
+  h_04d4cd0008e41d 1-22
+skills/dsh-harness-dev/SKILL.md
+  h_04d4cd0008e41d 1-100
+skills/dsh-harness-dev/references/conventions.md
+  h_04d4cd0008e41d 1-46
+skills/dsh-harness-dev/references/doc-map.md
+  h_04d4cd0008e41d 1-48
+skills/dsh-harness-dev/references/out-of-tree.md
+  h_04d4cd0008e41d 1-39
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.22",
+  "base_commit_sha": "cb586fe34ce8a93fbd583dc9139e066b4c1577a5",
+  "prompts": {},
+  "humans": {
+    "h_04d4cd0008e41d": {
+      "author": "aka-danielZhang <424011753@qq.com>"
+    }
+  }
+}
