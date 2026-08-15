@@ -1,0 +1,20 @@
+CHANGELOG.md
+  h_04d4cd0008e41d 5-11
+skills/dsh-harness-dev/SKILL.md
+  h_04d4cd0008e41d 3,25
+skills/dsh-harness-dev/references/doc-map.md
+  h_04d4cd0008e41d 25
+skills/dsh-harness-dev/references/out-of-tree.md
+  h_04d4cd0008e41d 3,20,22,24-26,28-97,103-104
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.22",
+  "base_commit_sha": "2eee627b60b8de0475f92c5fff4f526ad9e928fb",
+  "prompts": {},
+  "humans": {
+    "h_04d4cd0008e41d": {
+      "author": "aka-danielZhang <424011753@qq.com>"
+    }
+  }
+}
