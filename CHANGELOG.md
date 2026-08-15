@@ -2,6 +2,13 @@
 
 本仓库遵循 [Keep a Changelog](https://keepachangelog.com/zh-CN/1.1.0/)；版本号语义：skill 内容结构调整 bump minor，上游文档同步 bump patch（由 `scripts/update-check.mjs` 自动完成）。
 
+## [1.2.0] - 2026-08-15
+
+### 新增
+- 「安装插件」完整覆盖：`dsh plugin --profile <name> add/remove` 命令族（本地 checkout / git（pin commit）/ npm / tarball 四种安装源）、bundle 与 profile 双 manifest 模型、`--dump-config` 验证、bundle 对账机制、git 安装的 `prepare` + `allowBuilds` 构建陷阱及信任边界、层叠加载顺序。
+- SKILL.md 形态判别表新增「把现成插件装进自己的 dsh」一行；doc-map 手工表收录 `user/develop/basic/publish.md`。
+- out-of-tree.md 重组为「安装插件（正式）」与「临时挂载（--patch）」两节，明确主次。
+
 ## [1.1.2] - 2026-08-15
 
 ### 修复

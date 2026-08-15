@@ -1,6 +1,6 @@
 ---
 name: dsh-harness-dev
-version: 1.1.2
+version: 1.2.0
 description: Develop plugins for the DeepSeek Harness (DSH), the Cordis-based agent harness — in-repo packages (tools, services, events, UI), out-of-tree plugins mounted via cordis.yml/profile patches, and where each capability belongs. Use when the user mentions deepseek-harness, DSH, harness 插件, cordis.yml, ctx.tools/ctx.on/ctx.effect, @deepseek-ai/dsh-* packages, agent preset, adding a tool/service/package to the harness, or asks how the harness works while working outside its checkout.
 whenToUse: 任何为 DeepSeek Harness 开发、调试、扩展插件或组合 agent preset 的工作；cwd 不在 harness 仓库内时尤其依赖本 skill 路由文档。
 ---
@@ -22,6 +22,7 @@ whenToUse: 任何为 DeepSeek Harness 开发、调试、扩展插件或组合 ag
 |---|---|---|
 | 改 harness 本体：新增/修改 `packages/` 下的包（工具、服务、事件、UI、adapter） | 仓库内开发 | 切到 `$DSH` 工作，先读 `$DSH/AGENTS.md` 与 `architecture.md`；按 `references/doc-map.md` 选文档 |
 | 在独立目录写插件，挂到 dsh 运行时（Web UI / headless） | out-of-tree 插件 | 见下方快速上手与 `references/out-of-tree.md`；教程在 `user/develop/` |
+| 把现成插件装进自己的 dsh（安装 / 卸载 / 升级 / 分发） | 插件安装 | `dsh plugin --profile <name> add ...` 一族命令，见 `references/out-of-tree.md` 的「安装插件」节；权威教程 `user/develop/basic/publish.md` |
 | 只在当前会话临时扩展运行时（会话里有 `cordis_define` 等工具时） | 动态 Cordis 插件 | 优先加载 `cordis-plugin-development` skill（若在目录中），它专门覆盖动态插件 |
 | 组合一个 per-session 的 agent preset | preset | 目录 `${DSH_HOME:-~/.dsh}/.agent-presets/<id>/`，载入 `editing-cordis-compositions` skill（若在目录中） |
 

@@ -22,6 +22,7 @@
 | 加 Web Chat 会话节点 | `cookbook/adding-a-conversation-node.md` |
 | 加 vendored 依赖包 | `cookbook/adding-a-vendored-package.md` |
 | 扩展插件形态参考（hook/权限门、UI 插件、协议驱动、feature→mechanism 全表） | `cookbook/extension-cookbook.md` |
+| 插件打包与安装（bundle/profile manifest、`dsh plugin add`、git 安装构建陷阱） | `user/develop/basic/publish.md` |
 | 工具入门教程（产品视角） | `user/develop/basic/tool.md` |
 
 ## 深入某个子系统
