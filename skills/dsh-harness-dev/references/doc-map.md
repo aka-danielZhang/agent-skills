@@ -49,7 +49,7 @@
 | 文档标准（分层、one home per fact、词数预算、i18n pairing） | `AGENTS.md`（docs 子树） |
 
 <!-- BEGIN GENERATED:doc-index (scripts/update-check.mjs) — do not edit -->
-上游：https://github.com/deepseek-ai/deepseek-harness @ 47f943859b（2026-08-13）；由 scripts/update-check.mjs 生成，勿手改本区。
+上游：https://github.com/deepseek-ai/deepseek-harness @ 99f6f02fec（2026-08-17）；由 scripts/update-check.mjs 生成，勿手改本区。
 
 ### 顶层
 - `AGENTS.md` — AGENTS.md — The documentation standard
@@ -75,6 +75,7 @@
 ### cookbook/
 - `cookbook/adding-a-conversation-node.md` — Add a Web Client conversation node
 - `cookbook/adding-a-package.md` — Cookbook: adding a workspace package
+- `cookbook/adding-a-settings-card.md` — Cookbook: adding a settings card
 - `cookbook/adding-a-tool.md` — Tool authoring reference
 - `cookbook/adding-a-vendored-package.md` — Cookbook: adding a vendored package
 - `cookbook/adding-an-llm-adapter.md` — Cookbook: adding an LLM adapter
