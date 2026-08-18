@@ -1,0 +1,18 @@
+skills/dsh-harness-dev/SKILL.md
+  h_04d4cd0008e41d 3
+skills/dsh-harness-dev/references/doc-map.md
+  h_04d4cd0008e41d 52
+skills/dsh-harness-dev/upstream-state.json
+  h_04d4cd0008e41d 2,5
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.22",
+  "base_commit_sha": "61b8cc3f60b6c7c28ff5791150a4778468aeb936",
+  "prompts": {},
+  "humans": {
+    "h_04d4cd0008e41d": {
+      "author": "aka-danielZhang <424011753@qq.com>"
+    }
+  }
+}
