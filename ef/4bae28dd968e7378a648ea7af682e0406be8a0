@@ -1,0 +1,22 @@
+skills/dsh-harness-dev/SKILL.md
+  h_04d4cd0008e41d 3
+CHANGELOG.md
+  h_04d4cd0008e41d 5-9
+README.md
+  h_04d4cd0008e41d 5-8,91
+skills/spec-driven-repo-init/SKILL.md
+  h_04d4cd0008e41d 1-107
+skills/spec-driven-repo-init/references/templates.md
+  h_04d4cd0008e41d 1-140
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.22",
+  "base_commit_sha": "ef4bae28dd968e7378a648ea7af682e0406be8a0",
+  "prompts": {},
+  "humans": {
+    "h_04d4cd0008e41d": {
+      "author": "aka-danielZhang <424011753@qq.com>"
+    }
+  }
+}
