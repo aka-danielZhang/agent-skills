@@ -2,7 +2,10 @@
 
 开源 agent skill 仓库，收录可安装到 [DSH（DeepSeek Harness）](https://github.com/deepseek-ai/deepseek-harness)的个人 skill。每个 skill 是一个 `skills/<name>/SKILL.md` 目录（可附 `references/` 深度资料），安装后 DSH 在任意会话、任意工作目录都能发现并加载。
 
-首个 skill `dsh-harness-dev` 是 DeepSeek Harness 官方文档的导航与蒸馏：让 agent 在 harness 仓库之外也知道怎么开发 harness 插件，并带自动同步管线保持与上游文档一致。
+收录两个 skill：
+
+- `dsh-harness-dev`：DeepSeek Harness 官方文档的导航与蒸馏，让 agent 在 harness 仓库之外也知道怎么开发 harness 插件，并带自动同步管线保持与上游文档一致。
+- `spec-driven-repo-init`：把 harness 的 spec-driven 文档模式（AGENTS.md 为根、CLAUDE.md 软链、docs 分层、决策记录）沉淀为任意仓库的初始化流程与模板。
 
 ## 快速开始
 
@@ -85,6 +88,7 @@ GitHub Actions（`.github/workflows/update-check.yml`）每日 UTC 02:00 再兜�
 | Skill | 用途 |
 |---|---|
 | `dsh-harness-dev` | 在任意目录开发 DeepSeek Harness 插件：形态判别、out-of-tree 插件上手、扩展点地图、文档导航与仓库约定蒸馏 |
+| `spec-driven-repo-init` | 为任意仓库初始化 spec-driven 文档体系：根 AGENTS.md、CLAUDE.md 软链、docs 分层与索引关系、开发时的文档义务矩阵、可直接套用的模板 |
 
 ## License
 

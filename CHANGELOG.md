@@ -2,6 +2,11 @@
 
 本仓库遵循 [Keep a Changelog](https://keepachangelog.com/zh-CN/1.1.0/)；版本号语义：skill 内容结构调整 bump minor，上游文档同步 bump patch（由 `scripts/update-check.mjs` 自动完成）。
 
+## [1.3.0] - 2026-08-18
+
+### 新增
+- 第二个 skill `spec-driven-repo-init`：蒸馏 deepseek-harness 的 spec-driven 文档规范，为任意仓库初始化文档体系——根 AGENTS.md（standing orders）、CLAUDE.md 软链、docs 分层（每篇文档的读者与归属）、索引关系（一个事实一个家 + 相对路径链接）、开发时的文档义务矩阵；附 `references/templates.md` 全套可复制骨架。
+
 ## [1.2.0] - 2026-08-15
 
 ### 新增
