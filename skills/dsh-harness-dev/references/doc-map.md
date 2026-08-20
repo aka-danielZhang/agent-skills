@@ -49,7 +49,7 @@
 | 文档标准（分层、one home per fact、词数预算、i18n pairing） | `AGENTS.md`（docs 子树） |
 
 <!-- BEGIN GENERATED:doc-index (scripts/update-check.mjs) — do not edit -->
-上游：https://github.com/deepseek-ai/deepseek-harness @ 99f6f02fec（2026-08-17）；由 scripts/update-check.mjs 生成，勿手改本区。
+上游：https://github.com/deepseek-ai/deepseek-harness @ 141eb6fef8（2026-08-19）；由 scripts/update-check.mjs 生成，勿手改本区。
 
 ### 顶层
 - `AGENTS.md` — AGENTS.md — The documentation standard
@@ -110,6 +110,7 @@
 
 ### subsystems/
 - `subsystems/README.md` — Subsystems
+- `subsystems/agent-team.md` — Agent Teams
 - `subsystems/approval.md` — User Approval
 - `subsystems/attachment.md` — Durable Image Attachments
 - `subsystems/client-modules.md` — Client Modules
