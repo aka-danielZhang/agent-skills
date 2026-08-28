@@ -2,6 +2,12 @@
 
 本仓库遵循 [Keep a Changelog](https://keepachangelog.com/zh-CN/1.1.0/)；版本号语义：skill 内容结构调整 bump minor，上游文档同步 bump patch（由 `scripts/update-check.mjs` 自动完成）。
 
+## [Unreleased]
+
+### 改变
+
+- `spec-driven-repo-init` 更名为 `agent-repo-spec`，以覆盖 Agent-First 仓库规范的新建、审查、改造和持续演进；skill 版本升至 2.0.0。
+
 ## [1.3.0] - 2026-08-18
 
 ### 新增

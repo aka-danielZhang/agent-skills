@@ -1,13 +1,13 @@
 ---
-name: spec-driven-repo-init
-version: 1.1.0
-description: Initialize or restructure a repository for spec-driven, agent-first development with a minimal root AGENTS.md router, nested AGENTS.md rules, a CLAUDE.md symlink, one-home-per-fact docs, command ownership, machine-checkable links, and git-ignored user-local repository memory. Use when the user asks to 初始化仓库文档, set up AGENTS.md / CLAUDE.md, adopt spec-driven development, organize docs for AI agents, decide where rules or commands belong, or persist private per-repo local context.
-whenToUse: 初始化新仓库或改造现有仓库、建立 spec-driven 文档体系时；包括创建极简 AGENTS.md/CLAUDE.md、设计 docs/ 与子树规则、确定命令和事实归属、配置用户私有的仓库级长期记忆，以及规定代码变更对应的文档义务。
+name: agent-repo-spec
+version: 2.0.0
+description: Establish, audit, restructure, or evolve an agent-first repository specification system with a minimal AGENTS.md router, nested rules, one-home-per-fact docs, command ownership, reusable workflows, machine-checkable links, and git-ignored user-local memory. Use when the user asks to 初始化或改造仓库规范, set up or simplify AGENTS.md / CLAUDE.md, adopt agent-first or spec-driven development, reorganize docs, decide where rules or commands belong, audit repository guidance, or persist private per-repo context.
+whenToUse: 新建、审查、改造或持续演进 Agent-First 仓库规范时；包括创建或精简 AGENTS.md/CLAUDE.md、设计 docs/ 与子树规则、确定命令和事实归属、配置用户私有的仓库级长期记忆，以及校验代码变更对应的文档义务。
 ---
 
-# 用 Spec-Driven 文档体系初始化仓库
+# 建立与演进 Agent-First 仓库规范
 
-本 skill 蒸馏自 DeepSeek Harness 的文档规范（其 `AGENTS.md` + `docs/AGENTS.md`），把“仓库文档即 agent 操作规范”的模式沉淀为任意仓库可执行的初始化流程。模板与骨架在 [references/templates.md](references/templates.md)，按需读取。
+本 skill 蒸馏自 DeepSeek Harness 的文档规范（其 `AGENTS.md` + `docs/AGENTS.md`），把“仓库文档即 agent 操作规范”的模式沉淀为可用于新建、审查、改造和持续演进任意仓库的工作流。模板与骨架在 [references/templates.md](references/templates.md)，按需读取。
 
 ## 核心心智模型
 

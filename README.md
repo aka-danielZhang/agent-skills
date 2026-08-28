@@ -5,7 +5,7 @@
 收录两个 skill：
 
 - `dsh-harness-dev`：DeepSeek Harness 官方文档的导航与蒸馏，让 agent 在 harness 仓库之外也知道怎么开发 harness 插件，并带自动同步管线保持与上游文档一致。
-- `spec-driven-repo-init`：把 harness 的 spec-driven 文档模式沉淀为任意仓库的初始化流程：极简根 AGENTS.md 路由、子树增量规则、CLAUDE.md 软链、事实与命令归位，以及 Git 忽略的用户私有仓库记忆。
+- `agent-repo-spec`：建立、审查、改造并持续演进 Agent-First 仓库规范：极简根 AGENTS.md 路由、子树增量规则、CLAUDE.md 软链、事实与命令归位，以及 Git 忽略的用户私有仓库记忆。
 
 ## 快速开始
 
@@ -88,7 +88,7 @@ GitHub Actions（`.github/workflows/update-check.yml`）每日 UTC 02:00 再兜�
 | Skill | 用途 |
 |---|---|
 | `dsh-harness-dev` | 在任意目录开发 DeepSeek Harness 插件：形态判别、out-of-tree 插件上手、扩展点地图、文档导航与仓库约定蒸馏 |
-| `spec-driven-repo-init` | 为任意仓库初始化 spec-driven 文档体系：极简根 AGENTS.md、子树增量规则、CLAUDE.md 软链、事实与命令归位、用户私有仓库记忆及可直接套用的模板 |
+| `agent-repo-spec` | 建立与演进 Agent-First 仓库规范：极简根 AGENTS.md、子树增量规则、CLAUDE.md 软链、事实与命令归位、用户私有仓库记忆及可直接套用的模板 |
 
 ## License
 
