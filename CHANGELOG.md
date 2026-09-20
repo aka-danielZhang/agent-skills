@@ -4,6 +4,10 @@
 
 ## [Unreleased]
 
+### 新增
+
+- `agent-repo-spec` 纳入 `.agents/STATUS.md` 模式：当前工作焦点与各模块状态指针的唯一家（只链接不复制、阶段切换时更新），补齐"决策账本不放当前施工进度"之后进度信息的归属；SKILL 归位表与文档分层表、templates 目录树与两处骨架同步更新，skill 版本升至 2.1.0。
+
 ### 改变
 
 - `spec-driven-repo-init` 更名为 `agent-repo-spec`，以覆盖 Agent-First 仓库规范的新建、审查、改造和持续演进；skill 版本升至 2.0.0。

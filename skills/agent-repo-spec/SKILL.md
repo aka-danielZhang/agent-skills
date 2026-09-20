@@ -1,6 +1,6 @@
 ---
 name: agent-repo-spec
-version: 2.0.0
+version: 2.1.0
 description: Establish, audit, restructure, or evolve an agent-first repository specification system with a minimal AGENTS.md router, nested rules, one-home-per-fact docs, command ownership, reusable workflows, machine-checkable links, and git-ignored user-local memory. Use when the user asks to 初始化或改造仓库规范, set up or simplify AGENTS.md / CLAUDE.md, adopt agent-first or spec-driven development, reorganize docs, decide where rules or commands belong, audit repository guidance, or persist private per-repo context.
 whenToUse: 新建、审查、改造或持续演进 Agent-First 仓库规范时；包括创建或精简 AGENTS.md/CLAUDE.md、设计 docs/ 与子树规则、确定命令和事实归属、配置用户私有的仓库级长期记忆，以及校验代码变更对应的文档义务。
 ---
@@ -31,6 +31,7 @@ whenToUse: 新建、审查、改造或持续演进 Agent-First 仓库规范时�
 | 不需自动触发的线性操作指南 | `docs/cookbook/` |
 | 用户私有、仓库相关、跨会话持久的本机事实 | `.agents/local.md`（Git 忽略） |
 | 决策理由与放弃方案 | 仓库选定的唯一决策账本 |
+| 当前工作焦点与各模块状态指针（跨会话续接） | `.agents/STATUS.md`（只链接不复制，阶段切换时更新） |
 | 事故故事 | `docs/postmortem/` |
 
 同一流程只选一个家。不要同时创建内容相同的 skill 和 cookbook，也不要把规则正文复制进 skill。
@@ -88,6 +89,7 @@ ln -s AGENTS.md CLAUDE.md
 | `.agents/skills/` | agent 可触发的判断、步骤、工具调用、验证 | 产品合同和工程规则正文 |
 | `docs/cookbook/` | 不自动触发的线性 how-to | 规则理由、skill 的重复副本 |
 | `.agents/notes/` 或项目决策账本 | 决策理由、放弃方案、验证证据 | 当前施工进度 |
+| `.agents/STATUS.md` | 当前工作焦点与各模块状态指针 | 事实正文、决策理由（只链接） |
 | `docs/postmortem/` | 事故叙事 | 当前合同 |
 
 ### 命令归位
